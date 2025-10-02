@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5455337379850112"
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5455337379850112"
      crossorigin="anonymous"></script>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -890,14 +890,14 @@ print(response)
         </div>
         <div class="person">
           <div class="avatar">S</div>
-          <div style="font-weight:800;margin-top:8px">Mr. S</div>
+          <div style="font-weight:800;margin-top:8px">Sai Dwivedi</div>
           <div class="role">Co-Founder</div>
           <div class="muted" style="margin-top:8px">Quantum & Systems Lead</div>
         </div>
         <div class="person">
           <div class="avatar">Sam</div>
-          <div style="font-weight:800;margin-top:8px">Sam Hogan</div>
-          <div class="role">Senior Dev</div>
+          <div style="font-weight:800;margin-top:8px">Sam</div>
+          <div class="role">Seniour Dev</div>
           <div class="muted" style="margin-top:8px">SDKs & Infrastructure</div>
         </div>
       </div>
@@ -1076,11 +1076,10 @@ print(response)
       // simple heuristic emotion detector (toy)
       const lower = txt.toLowerCase();
       let emotion='neutral', conf=0.55;
-      if(/happy|thrill|excited|proud|love|amazing/.test(lower)){emotion='joy';conf=0.92}
-      if(/sad|sorrow|unhappy|down|depress/.test(lower)){emotion='sadness';conf=0.86}
-      if(/angry|mad|furious|hate/.test(lower)){emotion='anger';conf=0.9}
-      if(/worry|worried|anxiet|nervous|scared/.test(lower)){emotion='fear';conf=0.85}
-
+      if(/happy|thrill|excited|proud|love|amazing|joyful|delighted|ecstatic|blissful|cheerful|overjoyed|jubilant|gleeful|content|optimistic|pleased|grateful|radiant|euphoric/.test(lower)){emotion='joy';conf=0.92}
+      if(/sad|sorrow|unhappy|down|depress|grief|heartbroken|melancholy|miserable|glum|hopeless|lonely|disappointed|tearful|blue|devastated|despair|dismal|regretful|somber/.test(lower)){emotion='sadness';conf=0.86}
+      if(/angry|mad|furious|hate|outraged|irate|enraged|resentful|annoyed|frustrated|hostile|livid|bitter|irritated|aggravated|offended|vengeful|betrayed|disgusted|fuming/.test(lower)){emotion='anger';conf=0.9}
+      if(/worry|worried|anxiet|nervous|scared|afraid|terrified|panicked|frightened|alarmed|apprehensive|dread|uneasy|hesitant|shaky|intimidated|paranoid|restless|stressed|tense/.test(lower)){emotion='fear';conf=0.85}
       out.innerHTML = `<div style="font-weight:800;color:var(--white)">Emotion: ${emotion}</div><div style='color:var(--muted)'>Confidence: ${conf}</div>`;
       live.innerText = `${emotion} · ${Math.round(conf*100)}%`;
     }
@@ -1106,4 +1105,3 @@ print(response)
   </script>
 </body>
 </html>
-
